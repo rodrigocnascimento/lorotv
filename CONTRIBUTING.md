@@ -11,8 +11,8 @@ lorotv/
 ├── tcl/                      # Scripts para a TV TCL de referência
 │   ├── debloat_tcl.sh
 │   └── rollback_tcl.sh
+|   └── hardware_specs.md          # Especificações da TV de referência
 ├── install_projectivity.ps1  # Script genérico (pode funcionar em vários modelos)
-└── hardware_specs.md          # Especificações da TV de referência
 ```
 
 ## 📂 Como adicionar sua TV
