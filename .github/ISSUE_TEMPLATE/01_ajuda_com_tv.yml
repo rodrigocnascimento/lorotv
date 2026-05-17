@@ -1,0 +1,91 @@
+name: 🖥️ Pedir Ajuda — Sua TV
+description: Peça ajuda para aplicar os scripts na sua TV ou adaptar para outro modelo.
+labels: ["ajuda"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Leia antes de abrir
+
+        **Não recomendo que você mexa na sua TV.** Este projeto foi feito para
+        *minha* TV específica (TCL MT9221, 1 GB RAM). Os scripts desativam pacotes
+        do sistema — se algo der errado, você pode perder funcionalidades ou deixar
+        a TV instável.
+
+        Posso tentar ajudar, **mas apenas para a minha configuração de
+        hardware/software**. Outros modelos, fabricantes ou versões de sistema
+        podem ter comportamentos completamente diferentes — nesses casos,
+        infelizmente **não vou conseguir ajudar**.
+
+        ---
+
+  - type: input
+    id: tv_model
+    attributes:
+      label: Modelo exato da TV
+      description: O número do modelo completo (ex: TCL 43P635, Samsung TU8000).
+      placeholder: "Ex: TCL 43P635"
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: Versão do firmware / build
+      description: Vá em Configurações > Sobre > Informações do dispositivo.
+      placeholder: "Ex: V8-T221T01-LF1V622.000807"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ram
+    attributes:
+      label: Memória RAM
+      description: Sua TV tem quantos GB de RAM?
+      options:
+        - "1 GB"
+        - "1.5 GB"
+        - "2 GB"
+        - "3 GB+"
+        - Não sei
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chipset
+    attributes:
+      label: Chipset (se souber)
+      description: MediaTek? Realtek? Amlogic? Outro?
+      options:
+        - MediaTek (MT9xxx / MTK)
+        - Realtek (RTD)
+        - Amlogic (S9xx / T9xx)
+        - NovaTek (NT)
+        - Não sei
+      default: 4
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual o problema / o que você quer fazer?
+      description: Descreva o que está acontecendo ou o que você gostaria de alcançar.
+      placeholder: "Ex: Minha TV está muito lenta, quero aplicar o debloat mas tenho dúvida sobre o pacote X..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Comandos (se aplicável)
+      description: Cole aqui a saída de comandos como `adb shell pm list packages`, `adb shell top`, etc.
+      render: shell
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmação
+      options:
+        - label: Eu entendi que este projeto é mantido por uma pessoa e que não há garantia de suporte para o meu modelo.
+          required: true
+        - label: Eu li o disclaimer e assumo o risco de mexer na minha TV.
+          required: true

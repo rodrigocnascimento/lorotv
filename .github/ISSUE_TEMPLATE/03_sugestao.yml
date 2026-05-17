@@ -1,0 +1,31 @@
+name: 💡 Sugestão / Melhoria
+description: Proponha uma ideia para o projeto.
+labels: ["melhoria"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tem uma ideia para deixar o L.O.R.O-TV ainda melhor?
+        Pode ser novo script, novo pacote para desativar, documentação, etc.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Sua sugestão
+      description: Descreva a ideia com o máximo de detalhes possível.
+      placeholder: "Ex: Sugiro adicionar um script que desativa o serviço X, que encontrei rodando em background na minha TV..."
+    validations:
+      required: true
+
+  - type: input
+    id: tv_model
+    attributes:
+      label: Modelo da sua TV (se relevante)
+      description: Se a sugestão for específica para um modelo.
+      placeholder: "Ex: TCL 43P635"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional
+      description: Links, prints, saída de comandos — tudo que ajudar a entender a sugestão.

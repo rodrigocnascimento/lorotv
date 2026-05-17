@@ -1,0 +1,61 @@
+name: 🐛 Reportar Bug
+description: Algo nos scripts ou documentação não está funcionando como esperado.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de reportar
+
+        Verifique se já existe uma issue aberta sobre o mesmo problema.
+        Se possível, teste o `rollback` antes para confirmar se o bug é
+        causado pelos scripts.
+
+  - type: input
+    id: tv_model
+    attributes:
+      label: Modelo da TV
+      description: Em qual TV o bug acontece?
+      placeholder: "Ex: TCL 43P635"
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: Versão do firmware
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do bug
+      description: O que aconteceu? O que era esperado?
+      placeholder: "Ex: Ao rodar o debloat_tcl.sh, a tela ficou preta e o controle parou de responder."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Conectei via ADB
+        2. Rodei o comando X
+        3. A TV fez Y
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Saída do terminal
+      render: shell
+
+  - type: checkboxes
+    id: rollback
+    attributes:
+      label: Teste de rollback
+      options:
+        - label: Eu rodei o rollback e o problema persiste mesmo após restaurar os serviços.
