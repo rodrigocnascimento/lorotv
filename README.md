@@ -2,7 +2,7 @@
 
 **L**ow-resource **O**ptimization & **R**emote **O**rchestration for **TV**
 
-![L.O.R.O-TV](header.png)
+<img src="header.png" alt="L.O.R.O-TV" width="420" height="620">
 
 > "Porque se a TV tem 1GB de RAM, ela precisa da agilidade de um gato, não da lerdeza de um sistema cheio de ads."
 
