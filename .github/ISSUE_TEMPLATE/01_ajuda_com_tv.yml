@@ -23,7 +23,7 @@ body:
     id: tv_model
     attributes:
       label: Modelo exato da TV
-      description: O número do modelo completo (ex: TCL 43P635, Samsung TU8000)
+      description: O número do modelo completo - ex: TCL 43P635, Samsung TU8000
       placeholder: "Ex: TCL 43P635"
     validations:
       required: true
