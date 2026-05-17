@@ -8,7 +8,7 @@ body:
         ## ⚠️ Leia antes de abrir
 
         **Não recomendo que você mexa na sua TV.** Este projeto foi feito para
-        *minha* TV específica (TCL MT9221, 1 GB RAM). Os scripts desativam pacotes
+        *minha* TV específica "TCL MT9221, 1 GB RAM". Os scripts desativam pacotes
         do sistema — se algo der errado, você pode perder funcionalidades ou deixar
         a TV instável.
 
@@ -54,13 +54,13 @@ body:
   - type: dropdown
     id: chipset
     attributes:
-      label: Chipset (se souber)
+      label: Chipset se souber
       description: MediaTek? Realtek? Amlogic? Outro?
       options:
-        - MediaTek (MT9xxx / MTK)
-        - Realtek (RTD)
-        - Amlogic (S9xx / T9xx)
-        - NovaTek (NT)
+        - MediaTek MT9xxx / MTK
+        - Realtek RTD
+        - Amlogic S9xx / T9xx
+        - NovaTek NT
         - Não sei
       default: 4
 
@@ -76,7 +76,7 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs / Comandos (se aplicável)
+      label: Logs / Comandos se aplicável
       description: Cole aqui a saída de comandos como `adb shell pm list packages`, `adb shell top`, etc.
       render: shell
 
