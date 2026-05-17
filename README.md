@@ -16,6 +16,11 @@ Smart TVs Android vêm recheadas de **bloatware** — aplicativos pré-instalado
 
 Este projeto é um kit de ferramentas **DIY** para otimização radical de Smart TVs Android (foco em **TCL** com chipset **MediaTek**). Usamos acesso via **ADB** (Android Debug Bridge) para desativar esses serviços e liberar recursos do sistema.
 
+> [!CAUTION]
+> **Não recomendo que ninguém que não saiba exatamente o que está fazendo utilize estes scripts.** Mexer em pacotes do sistema pode causar comportamentos inesperados na TV. Você assume todo e qualquer risco ao executar qualquer comando deste repositório. **Isento-me de toda e qualquer responsabilidade** por danos, perda de funcionalidades ou qualquer outro problema decorrente do uso deste material.
+>
+> Dito isso, os scripts foram feitos para serem o mais seguros possível: eles **apenas desativam** pacotes com `pm disable-user` — nada é desinstalado, nada é irreversível. Um `pm enable` ou um reset de fábrica restaura tudo ao normal.
+
 ---
 
 ## ⚙️ Como funciona o ADB?
@@ -90,8 +95,6 @@ Animações de janelas, transições e durações são configuradas para **0** (
 **O que faz:** Reverte **tudo** que o `debloat_tcl.sh` fez.
 
 Usa `pm enable` para reativar os pacotes e restaura as animações para o valor padrão (`1.0`).
-
-> ⚠️ Use este script se precisar de suporte técnico oficial ou se a interface da TV apresentar comportamentos inesperados.
 
 ---
 
